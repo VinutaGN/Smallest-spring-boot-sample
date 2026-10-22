@@ -51,6 +51,8 @@ pipeline:
             script: mvn -f SmallestSpringApp/pom.xml test
             intelligence:
               disabled: true
+            container:
+              image: maven:3.9-eclipse-temurin-17
         - id: coverage
           name: Upload Coverage
           run:
