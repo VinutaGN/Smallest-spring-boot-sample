@@ -17,8 +17,8 @@ pipeline:
         enabled: true
         repo: VinutaGN/Smallest-spring-boot-sample
         connector: github_conncetor_emp
-    - id: javaMavenBuildTestHostedLinuxStage_1
-      name: Java Maven Build and Test on Harness Cloud (Linux)
+    - id: Build_and_Push_Docker_Image
+      name: Build_and_Push_Docker_Image.
       clone:
         enabled: true
       cache:
