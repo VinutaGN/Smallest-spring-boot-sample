@@ -2,21 +2,11 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: "echo \"Current directory:\"\r
-
-              pwd\r
-
-              \r
-
-              echo \"Files and folders available:\"\r
+            script: "pwd\r
 
               ls -la\r
 
-              \r
-
-              echo \"Searching for pom.xml:\"\r
-
-              find /harness -name pom.xml -type f 2>/dev/null"
+              find /harness -name pom.xml -type f"
           name: Build_Application
           id: Build_Application
       name: Build_and_Test
