@@ -41,6 +41,9 @@ pipeline:
               ls -la SmallestSpringApp\r
 
               mvn -f SmallestSpringApp/pom.xml clean package"
+            container:
+              image: maven:3.9-eclipse-temurin-17
+              connector: dockerhub_connector
         - id: testLinux
           name: Test on Linux
           run-test:
