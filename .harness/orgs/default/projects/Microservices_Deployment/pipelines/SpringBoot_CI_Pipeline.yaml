@@ -53,13 +53,6 @@ pipeline:
               disabled: true
             container:
               image: maven:3.9-eclipse-temurin-17
-        - id: coverage
-          name: Upload Coverage
-          run:
-            shell: bash
-            script: hcli cov upload
-            env:
-              CI_ENABLE_HCLI_FOR_TESTS: "true"
         - name: Build_and_Push_Image
           id: Build_and_Push_Image
           build:
