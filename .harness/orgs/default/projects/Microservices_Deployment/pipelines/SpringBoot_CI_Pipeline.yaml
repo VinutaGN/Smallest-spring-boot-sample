@@ -2,7 +2,10 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: java -version
+            script: mvn -f /harness/SmallestSpringApp/pom.xml clean package
+            container:
+              image: maven:3.9-eclipse-temurin-17
+              connector: dockerhub_connector
           name: Build_Application
           id: Build_Application
       name: Build_and_Test
