@@ -52,3 +52,15 @@ pipeline:
             script: hcli cov upload
             env:
               CI_ENABLE_HCLI_FOR_TESTS: "true"
+        - name: Build_and_Push_Image
+          id: Build_and_Push_Image
+          build:
+            uses: buildAndPushToDocker
+            with:
+              connector: dockerhub_connector
+              repo: docker.io/vinutagn
+              tags:
+                - latest
+              caching: true
+              dockerfile: SmallestSpringApp/Dockerfile
+              context: SmallestSpringApp
