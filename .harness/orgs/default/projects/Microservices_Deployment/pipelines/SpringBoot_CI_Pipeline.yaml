@@ -48,10 +48,7 @@ pipeline:
           name: Test on Linux
           run-test:
             shell: bash
-            script: |-
-              set -eu
-              mvn -B test -Dmaven.build.cache.skipCache=true
-              mvn -B jacoco:report || echo "JaCoCo is not configured; skipping coverage report generation."
+            script: mvn -f SmallestSpringApp/pom.xml test
             intelligence:
               disabled: true
         - id: coverage
