@@ -59,7 +59,7 @@ pipeline:
             uses: buildAndPushToDocker
             with:
               connector: dockerhub_connector
-              repo: docker.io/vinutagn
+              repo: docker.io/vinutagn/spring-boot-microservice
               tags:
                 - latest
               caching: true
