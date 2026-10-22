@@ -2,7 +2,7 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: mvn -f /harness/SmallestSpringApp/pom.xml clean package
+            script: java -version
           name: Build_Application
           id: Build_Application
       name: Build_and_Test
