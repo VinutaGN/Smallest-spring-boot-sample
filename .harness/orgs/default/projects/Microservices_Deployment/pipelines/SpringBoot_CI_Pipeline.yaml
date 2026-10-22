@@ -4,6 +4,8 @@ pipeline:
         - run:
             script: "echo \"Starting Spring Boot build\"\r
 
+              cd SmallestSpringApp\r
+
               mvn clean package"
           name: Build_Application
           id: Build_Application
