@@ -6,6 +6,12 @@ pipeline:
 
               echo \"Repository: Smallest-spring-boot-sample\"\r
 
+              echo \"Checking Java and Maven availability\"\r
+
+              java -version\r
+
+              mvn -version\r
+
               echo \"Build stage initialized\""
           name: Build_Application
           id: Build_Application
