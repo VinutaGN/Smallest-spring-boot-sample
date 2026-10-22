@@ -3,3 +3,5 @@ pipeline:
     - steps:
         - run:
             script: echo "hello world"
+      name: Build_and_Test
+      id: Build_and_Test
