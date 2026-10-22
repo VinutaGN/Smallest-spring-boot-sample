@@ -34,7 +34,7 @@ pipeline:
           name: Build on Linux
           run:
             shell: bash
-            script: mvn -f SmallestSpringApp/pom.xml -B clean package
+            script: mvn -f SmallestSpringApp/pom.xml clean package
         - id: testLinux
           name: Test on Linux
           run-test:
