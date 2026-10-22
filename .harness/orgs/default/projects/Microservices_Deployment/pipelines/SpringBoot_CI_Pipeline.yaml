@@ -2,11 +2,21 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: "echo \"Starting Spring Boot build\"\r
+            script: "echo \"Current directory:\"\r
 
-              cd SmallestSpringApp\r
+              pwd\r
 
-              mvn clean package"
+              \r
+
+              echo \"Files and folders available:\"\r
+
+              ls -la\r
+
+              \r
+
+              echo \"Searching for pom.xml:\"\r
+
+              find /harness -name pom.xml -type f 2>/dev/null"
           name: Build_Application
           id: Build_Application
       name: Build_and_Test
