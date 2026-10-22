@@ -2,11 +2,7 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: "pwd\r
-
-              ls -la\r
-
-              find /harness -name pom.xml -type f"
+            script: mvn -f /harness/SmallestSpringApp/pom.xml clean package
           name: Build_Application
           id: Build_Application
       name: Build_and_Test
