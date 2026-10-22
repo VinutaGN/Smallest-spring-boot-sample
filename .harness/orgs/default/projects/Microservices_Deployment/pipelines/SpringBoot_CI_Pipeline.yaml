@@ -2,17 +2,9 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: "echo \"Starting Spring Boot CI pipeline\"\r
+            script: "echo \"Starting Spring Boot build\"\r
 
-              echo \"Repository: Smallest-spring-boot-sample\"\r
-
-              echo \"Checking Java and Maven availability\"\r
-
-              java -version\r
-
-              mvn -version\r
-
-              echo \"Build stage initialized\""
+              mvn clean package"
           name: Build_Application
           id: Build_Application
       name: Build_and_Test
